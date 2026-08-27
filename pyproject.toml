@@ -1,0 +1,117 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-runtime"
+version = "0.1.0"
+description = "面向多智能体协作的低开销通信、状态传递与共享记忆机制 (赛题10)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "OS Competition Team" }]
+keywords = [
+    "multi-agent",
+    "llm",
+    "structured-protocol",
+    "shared-memory",
+    "codeact",
+    "openeuler",
+]
+
+# 核心依赖保持精简：默认 mock-first，无需任何外部模型即可运行全部测试与实验。
+dependencies = [
+    "pydantic>=2.5,<3.0",
+    "numpy>=1.24",
+    "psutil>=5.9",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# 可选向量后端（CPU）
+vector = [
+    "hnswlib>=0.8.0",
+]
+faiss = [
+    "faiss-cpu>=1.7.4",
+]
+embedding = [
+    "sentence-transformers>=2.2.2",
+]
+# 序列化对照
+serialize = [
+    "msgpack>=1.0.5",
+]
+# 真实 LLM 适配器（OpenAI 兼容）
+llm = [
+    "openai>=1.10.0",
+    "tiktoken>=0.5.2",
+]
+# 控制接口 / Dashboard（可选）
+api = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+]
+# 交付物生成（答辩 PPT，可选）
+deliverables = [
+    "python-pptx>=0.6.23",
+]
+# 开发与质量工具
+dev = [
+    "pytest>=7.4",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.3.0",
+    "mypy>=1.8",
+    "coverage>=7.4",
+    "msgpack>=1.0.5",
+]
+
+[project.scripts]
+agent-runtime = "agent_runtime.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agent_runtime = ["py.typed"]
+
+# ----------------------------------------------------------------------------
+# 工具配置
+# ----------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP", "C4", "SIM"]
+ignore = ["E501"]  # 行长由 formatter 控制
+
+[tool.ruff.lint.isort]
+known-first-party = ["agent_runtime"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+files = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-ra -q"
+markers = [
+    "openeuler: 仅在 openEuler 目标环境运行的测试",
+    "stability: 连续稳定性 / 故障注入测试",
+    "slow: 较慢的集成或基准冒烟测试",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["src/agent_runtime"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

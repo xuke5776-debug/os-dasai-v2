@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.uv/
+
+# 测试与覆盖率
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# 环境与密钥
+.env
+*.key
+
+# 运行期数据（默认数据根目录）
+.agent_data/
+
+# 注意：results/ 不忽略——实验原始数据需保留作为交付证据。
+# 但临时/草稿结果可放入 results/_scratch/
+results/_scratch/
+
+# 编辑器
+.idea/
+.vscode/
+*.swp
+.DS_Store
