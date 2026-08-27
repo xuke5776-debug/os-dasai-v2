@@ -1,0 +1,1329 @@
+{
+  "suite": "ablation",
+  "repeat": 5,
+  "seed": 42,
+  "env": {
+    "python": "3.11.9",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "capabilities": {
+      "rlimit": true,
+      "cgroup_v2": false,
+      "namespaces": false,
+      "shared_memory": false,
+      "unix_socket": true,
+      "podman": false,
+      "bubblewrap": false
+    }
+  },
+  "results": {
+    "D": {
+      "label": "Full System",
+      "config": {
+        "id": "D",
+        "label": "Full System",
+        "mode": "structured",
+        "use_state": true,
+        "use_memory": true,
+        "use_sandbox": true
+      },
+      "summary": {
+        "message_count": {
+          "mean": 10.0,
+          "std": 0.0,
+          "p50": 10.0,
+          "p95": 10.0,
+          "min": 10.0,
+          "max": 10.0,
+          "n": 5
+        },
+        "text_tokens": {
+          "mean": 760.0,
+          "std": 0.0,
+          "p50": 760.0,
+          "p95": 760.0,
+          "min": 760.0,
+          "max": 760.0,
+          "n": 5
+        },
+        "text_chars": {
+          "mean": 3020.0,
+          "std": 0.0,
+          "p50": 3020.0,
+          "p95": 3020.0,
+          "min": 3020.0,
+          "max": 3020.0,
+          "n": 5
+        },
+        "state_transfers": {
+          "mean": 4.0,
+          "std": 0.0,
+          "p50": 4.0,
+          "p95": 4.0,
+          "min": 4.0,
+          "max": 4.0,
+          "n": 5
+        },
+        "state_bytes": {
+          "mean": 4144.0,
+          "std": 0.0,
+          "p50": 4144.0,
+          "p95": 4144.0,
+          "min": 4144.0,
+          "max": 4144.0,
+          "n": 5
+        },
+        "artifact_refs": {
+          "mean": 4.0,
+          "std": 0.0,
+          "p50": 4.0,
+          "p95": 4.0,
+          "min": 4.0,
+          "max": 4.0,
+          "n": 5
+        },
+        "llm_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "llm_prompt_tokens": {
+          "mean": 198.0,
+          "std": 0.0,
+          "p50": 198.0,
+          "p95": 198.0,
+          "min": 198.0,
+          "max": 198.0,
+          "n": 5
+        },
+        "llm_completion_tokens": {
+          "mean": 316.0,
+          "std": 47.58150901348127,
+          "p50": 312.0,
+          "p95": 367.2,
+          "min": 234.0,
+          "max": 370.0,
+          "n": 5
+        },
+        "tool_calls": {
+          "mean": 7.0,
+          "std": 0.0,
+          "p50": 7.0,
+          "p95": 7.0,
+          "min": 7.0,
+          "max": 7.0,
+          "n": 5
+        },
+        "repeated_tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_retrieved": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_used": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_effective": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_harmful": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "error_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "degradation_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "latency_sec": {
+          "mean": 0.017345566605217754,
+          "std": 0.0007500257775338629,
+          "p50": 0.017030916002113372,
+          "p95": 0.018427058405359277,
+          "min": 0.01654554200649727,
+          "max": 0.018583875003969297,
+          "n": 5
+        },
+        "rss_peak_mb": {
+          "mean": 52.625,
+          "std": 0.12382257972599343,
+          "p50": 52.625,
+          "p95": 52.76875,
+          "min": 52.421875,
+          "max": 52.78125,
+          "n": 5
+        },
+        "task_quality": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "task_success": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "total_llm_tokens": {
+          "mean": 514.0,
+          "std": 47.58150901348127,
+          "p50": 510.0,
+          "p95": 565.2,
+          "min": 432.0,
+          "max": 568.0,
+          "n": 5
+        }
+      },
+      "derived": {
+        "token_saving_vs_A": 0.8512,
+        "latency_improvement_vs_A": -14.1936,
+        "repeated_calc_reduction_vs_A": 0.125,
+        "effective_hit_rate": 1.0,
+        "success_rate": 1.0
+      }
+    },
+    "D-noMem": {
+      "label": "−Shared Memory",
+      "config": {
+        "id": "D-noMem",
+        "label": "−Shared Memory",
+        "mode": "structured",
+        "use_state": true,
+        "use_memory": false,
+        "use_sandbox": true
+      },
+      "summary": {
+        "message_count": {
+          "mean": 10.0,
+          "std": 0.0,
+          "p50": 10.0,
+          "p95": 10.0,
+          "min": 10.0,
+          "max": 10.0,
+          "n": 5
+        },
+        "text_tokens": {
+          "mean": 760.0,
+          "std": 0.0,
+          "p50": 760.0,
+          "p95": 760.0,
+          "min": 760.0,
+          "max": 760.0,
+          "n": 5
+        },
+        "text_chars": {
+          "mean": 3020.0,
+          "std": 0.0,
+          "p50": 3020.0,
+          "p95": 3020.0,
+          "min": 3020.0,
+          "max": 3020.0,
+          "n": 5
+        },
+        "state_transfers": {
+          "mean": 4.0,
+          "std": 0.0,
+          "p50": 4.0,
+          "p95": 4.0,
+          "min": 4.0,
+          "max": 4.0,
+          "n": 5
+        },
+        "state_bytes": {
+          "mean": 4144.0,
+          "std": 0.0,
+          "p50": 4144.0,
+          "p95": 4144.0,
+          "min": 4144.0,
+          "max": 4144.0,
+          "n": 5
+        },
+        "artifact_refs": {
+          "mean": 4.0,
+          "std": 0.0,
+          "p50": 4.0,
+          "p95": 4.0,
+          "min": 4.0,
+          "max": 4.0,
+          "n": 5
+        },
+        "llm_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "llm_prompt_tokens": {
+          "mean": 198.0,
+          "std": 0.0,
+          "p50": 198.0,
+          "p95": 198.0,
+          "min": 198.0,
+          "max": 198.0,
+          "n": 5
+        },
+        "llm_completion_tokens": {
+          "mean": 316.0,
+          "std": 47.58150901348127,
+          "p50": 312.0,
+          "p95": 367.2,
+          "min": 234.0,
+          "max": 370.0,
+          "n": 5
+        },
+        "tool_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "repeated_tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_retrieved": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_used": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_effective": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_harmful": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "error_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "degradation_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "latency_sec": {
+          "mean": 0.03160880840150639,
+          "std": 0.00048569280411603566,
+          "p50": 0.031702958993264474,
+          "p95": 0.03204079940041993,
+          "min": 0.030686251004226506,
+          "max": 0.03206654099631123,
+          "n": 5
+        },
+        "rss_peak_mb": {
+          "mean": 53.865625,
+          "std": 0.007654655446197431,
+          "p50": 53.859375,
+          "p95": 53.875,
+          "min": 53.859375,
+          "max": 53.875,
+          "n": 5
+        },
+        "task_quality": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "task_success": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "total_llm_tokens": {
+          "mean": 514.0,
+          "std": 47.58150901348127,
+          "p50": 510.0,
+          "p95": 565.2,
+          "min": 432.0,
+          "max": 568.0,
+          "n": 5
+        }
+      },
+      "derived": {
+        "token_saving_vs_A": 0.8512,
+        "latency_improvement_vs_A": -26.6874,
+        "repeated_calc_reduction_vs_A": 0.0,
+        "effective_hit_rate": 0.0,
+        "success_rate": 1.0
+      }
+    },
+    "D-noState": {
+      "label": "−State Exchange",
+      "config": {
+        "id": "D-noState",
+        "label": "−State Exchange",
+        "mode": "structured",
+        "use_state": false,
+        "use_memory": true,
+        "use_sandbox": true
+      },
+      "summary": {
+        "message_count": {
+          "mean": 10.0,
+          "std": 0.0,
+          "p50": 10.0,
+          "p95": 10.0,
+          "min": 10.0,
+          "max": 10.0,
+          "n": 5
+        },
+        "text_tokens": {
+          "mean": 4798.0,
+          "std": 0.0,
+          "p50": 4798.0,
+          "p95": 4798.0,
+          "min": 4798.0,
+          "max": 4798.0,
+          "n": 5
+        },
+        "text_chars": {
+          "mean": 19180.0,
+          "std": 0.0,
+          "p50": 19180.0,
+          "p95": 19180.0,
+          "min": 19180.0,
+          "max": 19180.0,
+          "n": 5
+        },
+        "state_transfers": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "state_bytes": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "artifact_refs": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "llm_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "llm_prompt_tokens": {
+          "mean": 198.0,
+          "std": 0.0,
+          "p50": 198.0,
+          "p95": 198.0,
+          "min": 198.0,
+          "max": 198.0,
+          "n": 5
+        },
+        "llm_completion_tokens": {
+          "mean": 333.2,
+          "std": 70.20655240075531,
+          "p50": 310.0,
+          "p95": 429.2,
+          "min": 234.0,
+          "max": 444.0,
+          "n": 5
+        },
+        "tool_calls": {
+          "mean": 7.0,
+          "std": 0.0,
+          "p50": 7.0,
+          "p95": 7.0,
+          "min": 7.0,
+          "max": 7.0,
+          "n": 5
+        },
+        "repeated_tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_retrieved": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_used": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_effective": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_harmful": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "error_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "degradation_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "latency_sec": {
+          "mean": 0.017314933199668304,
+          "std": 0.0005702721113108619,
+          "p50": 0.017302624983130954,
+          "p95": 0.01810530860966537,
+          "min": 0.016604290998657234,
+          "max": 0.018241417012177408,
+          "n": 5
+        },
+        "rss_peak_mb": {
+          "mean": 53.95,
+          "std": 0.046770717334674264,
+          "p50": 53.9375,
+          "p95": 54.01875,
+          "min": 53.90625,
+          "max": 54.03125,
+          "n": 5
+        },
+        "task_quality": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "task_success": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "total_llm_tokens": {
+          "mean": 531.2,
+          "std": 70.2065524007553,
+          "p50": 508.0,
+          "p95": 627.1999999999999,
+          "min": 432.0,
+          "max": 642.0,
+          "n": 5
+        }
+      },
+      "derived": {
+        "token_saving_vs_A": 0.0603,
+        "latency_improvement_vs_A": -14.1668,
+        "repeated_calc_reduction_vs_A": 0.125,
+        "effective_hit_rate": 1.0,
+        "success_rate": 1.0
+      }
+    },
+    "D-noSandbox": {
+      "label": "−CodeAct Sandbox",
+      "config": {
+        "id": "D-noSandbox",
+        "label": "−CodeAct Sandbox",
+        "mode": "structured",
+        "use_state": true,
+        "use_memory": true,
+        "use_sandbox": false
+      },
+      "summary": {
+        "message_count": {
+          "mean": 10.0,
+          "std": 0.0,
+          "p50": 10.0,
+          "p95": 10.0,
+          "min": 10.0,
+          "max": 10.0,
+          "n": 5
+        },
+        "text_tokens": {
+          "mean": 760.0,
+          "std": 0.0,
+          "p50": 760.0,
+          "p95": 760.0,
+          "min": 760.0,
+          "max": 760.0,
+          "n": 5
+        },
+        "text_chars": {
+          "mean": 3020.0,
+          "std": 0.0,
+          "p50": 3020.0,
+          "p95": 3020.0,
+          "min": 3020.0,
+          "max": 3020.0,
+          "n": 5
+        },
+        "state_transfers": {
+          "mean": 4.0,
+          "std": 0.0,
+          "p50": 4.0,
+          "p95": 4.0,
+          "min": 4.0,
+          "max": 4.0,
+          "n": 5
+        },
+        "state_bytes": {
+          "mean": 4144.0,
+          "std": 0.0,
+          "p50": 4144.0,
+          "p95": 4144.0,
+          "min": 4144.0,
+          "max": 4144.0,
+          "n": 5
+        },
+        "artifact_refs": {
+          "mean": 4.0,
+          "std": 0.0,
+          "p50": 4.0,
+          "p95": 4.0,
+          "min": 4.0,
+          "max": 4.0,
+          "n": 5
+        },
+        "llm_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "llm_prompt_tokens": {
+          "mean": 198.0,
+          "std": 0.0,
+          "p50": 198.0,
+          "p95": 198.0,
+          "min": 198.0,
+          "max": 198.0,
+          "n": 5
+        },
+        "llm_completion_tokens": {
+          "mean": 316.0,
+          "std": 47.58150901348127,
+          "p50": 312.0,
+          "p95": 367.2,
+          "min": 234.0,
+          "max": 370.0,
+          "n": 5
+        },
+        "tool_calls": {
+          "mean": 7.0,
+          "std": 0.0,
+          "p50": 7.0,
+          "p95": 7.0,
+          "min": 7.0,
+          "max": 7.0,
+          "n": 5
+        },
+        "repeated_tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_retrieved": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_used": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_effective": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "memory_harmful": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "error_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "degradation_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "latency_sec": {
+          "mean": 0.0015255004022037611,
+          "std": 7.064174187433073e-05,
+          "p50": 0.0015412930079037324,
+          "p95": 0.0016027168079745025,
+          "min": 0.0014106669841567054,
+          "max": 0.001608000005944632,
+          "n": 5
+        },
+        "rss_peak_mb": {
+          "mean": 54.20625,
+          "std": 0.08291561975888499,
+          "p50": 54.203125,
+          "p95": 54.3125,
+          "min": 54.078125,
+          "max": 54.328125,
+          "n": 5
+        },
+        "task_quality": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "task_success": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "total_llm_tokens": {
+          "mean": 514.0,
+          "std": 47.58150901348127,
+          "p50": 510.0,
+          "p95": 565.2,
+          "min": 432.0,
+          "max": 568.0,
+          "n": 5
+        }
+      },
+      "derived": {
+        "token_saving_vs_A": 0.8512,
+        "latency_improvement_vs_A": -0.3362,
+        "repeated_calc_reduction_vs_A": 0.125,
+        "effective_hit_rate": 1.0,
+        "success_rate": 1.0
+      }
+    },
+    "B": {
+      "label": "Structured only",
+      "config": {
+        "id": "B",
+        "label": "Structured only",
+        "mode": "structured",
+        "use_state": false,
+        "use_memory": false,
+        "use_sandbox": false
+      },
+      "summary": {
+        "message_count": {
+          "mean": 10.0,
+          "std": 0.0,
+          "p50": 10.0,
+          "p95": 10.0,
+          "min": 10.0,
+          "max": 10.0,
+          "n": 5
+        },
+        "text_tokens": {
+          "mean": 4798.0,
+          "std": 0.0,
+          "p50": 4798.0,
+          "p95": 4798.0,
+          "min": 4798.0,
+          "max": 4798.0,
+          "n": 5
+        },
+        "text_chars": {
+          "mean": 19180.0,
+          "std": 0.0,
+          "p50": 19180.0,
+          "p95": 19180.0,
+          "min": 19180.0,
+          "max": 19180.0,
+          "n": 5
+        },
+        "state_transfers": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "state_bytes": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "artifact_refs": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "llm_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "llm_prompt_tokens": {
+          "mean": 198.0,
+          "std": 0.0,
+          "p50": 198.0,
+          "p95": 198.0,
+          "min": 198.0,
+          "max": 198.0,
+          "n": 5
+        },
+        "llm_completion_tokens": {
+          "mean": 333.2,
+          "std": 70.20655240075531,
+          "p50": 310.0,
+          "p95": 429.2,
+          "min": 234.0,
+          "max": 444.0,
+          "n": 5
+        },
+        "tool_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "repeated_tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_retrieved": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_used": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_effective": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_harmful": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "error_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "degradation_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "latency_sec": {
+          "mean": 0.001147916802437976,
+          "std": 5.659831085406082e-05,
+          "p50": 0.0011616670090006664,
+          "p95": 0.001219016601680778,
+          "min": 0.0010632510093273595,
+          "max": 0.0012311250029597431,
+          "n": 5
+        },
+        "rss_peak_mb": {
+          "mean": 54.328125,
+          "std": 0.0,
+          "p50": 54.328125,
+          "p95": 54.328125,
+          "min": 54.328125,
+          "max": 54.328125,
+          "n": 5
+        },
+        "task_quality": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "task_success": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "total_llm_tokens": {
+          "mean": 531.2,
+          "std": 70.2065524007553,
+          "p50": 508.0,
+          "p95": 627.1999999999999,
+          "min": 432.0,
+          "max": 642.0,
+          "n": 5
+        }
+      },
+      "derived": {
+        "token_saving_vs_A": 0.0603,
+        "latency_improvement_vs_A": -0.0055,
+        "repeated_calc_reduction_vs_A": 0.0,
+        "effective_hit_rate": 0.0,
+        "success_rate": 1.0
+      }
+    },
+    "A": {
+      "label": "Text Baseline",
+      "config": {
+        "id": "A",
+        "label": "Text Baseline",
+        "mode": "text",
+        "use_state": false,
+        "use_memory": false,
+        "use_sandbox": false
+      },
+      "summary": {
+        "message_count": {
+          "mean": 10.0,
+          "std": 0.0,
+          "p50": 10.0,
+          "p95": 10.0,
+          "min": 10.0,
+          "max": 10.0,
+          "n": 5
+        },
+        "text_tokens": {
+          "mean": 5106.0,
+          "std": 0.0,
+          "p50": 5106.0,
+          "p95": 5106.0,
+          "min": 5106.0,
+          "max": 5106.0,
+          "n": 5
+        },
+        "text_chars": {
+          "mean": 20414.0,
+          "std": 0.0,
+          "p50": 20414.0,
+          "p95": 20414.0,
+          "min": 20414.0,
+          "max": 20414.0,
+          "n": 5
+        },
+        "state_transfers": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "state_bytes": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "artifact_refs": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "llm_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "llm_prompt_tokens": {
+          "mean": 198.0,
+          "std": 0.0,
+          "p50": 198.0,
+          "p95": 198.0,
+          "min": 198.0,
+          "max": 198.0,
+          "n": 5
+        },
+        "llm_completion_tokens": {
+          "mean": 333.2,
+          "std": 70.20655240075531,
+          "p50": 310.0,
+          "p95": 429.2,
+          "min": 234.0,
+          "max": 444.0,
+          "n": 5
+        },
+        "tool_calls": {
+          "mean": 8.0,
+          "std": 0.0,
+          "p50": 8.0,
+          "p95": 8.0,
+          "min": 8.0,
+          "max": 8.0,
+          "n": 5
+        },
+        "repeated_tool_calls": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_retrieved": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_used": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_effective": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "memory_harmful": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "error_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "degradation_count": {
+          "mean": 0.0,
+          "std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 5
+        },
+        "latency_sec": {
+          "mean": 0.0011416334047680721,
+          "std": 2.4890415962231585e-05,
+          "p50": 0.0011436670029070228,
+          "p95": 0.0011704578064382076,
+          "min": 0.0011088750034105033,
+          "max": 0.0011716660083038732,
+          "n": 5
+        },
+        "rss_peak_mb": {
+          "mean": 54.34375,
+          "std": 0.009882117688026186,
+          "p50": 54.34375,
+          "p95": 54.35625,
+          "min": 54.328125,
+          "max": 54.359375,
+          "n": 5
+        },
+        "task_quality": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "task_success": {
+          "mean": 1.0,
+          "std": 0.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "n": 5
+        },
+        "total_llm_tokens": {
+          "mean": 531.2,
+          "std": 70.2065524007553,
+          "p50": 508.0,
+          "p95": 627.1999999999999,
+          "min": 432.0,
+          "max": 642.0,
+          "n": 5
+        }
+      },
+      "derived": {
+        "token_saving_vs_A": 0.0,
+        "latency_improvement_vs_A": 0.0,
+        "repeated_calc_reduction_vs_A": 0.0,
+        "effective_hit_rate": 0.0,
+        "success_rate": 1.0
+      }
+    }
+  }
+}
