@@ -1,0 +1,44 @@
+suite: main
+repeat: 5
+seed: 42
+env:
+  python: 3.11.9
+  platform: macOS-26.5.1-arm64-arm-64bit
+  machine: arm64
+  capabilities:
+    rlimit: True
+    cgroup_v2: False
+    namespaces: False
+    shared_memory: False
+    unix_socket: True
+    podman: False
+    bubblewrap: False
+configs:
+  -
+    id: A
+    label: Text Baseline
+    mode: text
+    use_state: False
+    use_memory: False
+    use_sandbox: False
+  -
+    id: B
+    label: Structured Protocol
+    mode: structured
+    use_state: False
+    use_memory: False
+    use_sandbox: False
+  -
+    id: C
+    label: Structured + State
+    mode: structured
+    use_state: True
+    use_memory: False
+    use_sandbox: False
+  -
+    id: D
+    label: Full System
+    mode: structured
+    use_state: True
+    use_memory: True
+    use_sandbox: True
